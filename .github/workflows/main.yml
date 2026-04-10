@@ -32,10 +32,8 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Install Haxelib
         run: |
-          sudo apt-get install libvlc-dev
-          sudo apt-get install libvlccore-dev
           haxelib setup ~/haxelib
-          haxelib git hxcpp https://github.com/haxefoundation/hxcpp > /dev/null --quiet
+          haxelib git hxcpp https://github.com/haxefoundation/hxcpp
           chmod +x ./setup/unix.sh
           sh ./setup/unix.sh
       - name: Skip SScript setup mode
