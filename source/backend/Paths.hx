@@ -429,7 +429,7 @@ class Paths
 		if(!currentTrackedSounds.exists(file))
 		{
 			#if !cpp
-			if(OpenFlAssets.exists(file)
+			if(OpenFlAssets.exists(file))
 				currentTrackedSounds.set(file, Sound.fromFile(file));
 			#else
 			if(OpenFlAssets.exists(file, SOUND))
