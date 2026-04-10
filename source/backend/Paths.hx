@@ -428,8 +428,8 @@ class Paths
 		//trace('precaching sound: $file');
 		if(!currentTrackedSounds.exists(file))
 		{
-			#if sys
-			if(FileSystem.exists(file))
+			#if !cpp
+			if(OpenFlAssets.exists(file)
 				currentTrackedSounds.set(file, Sound.fromFile(file));
 			#else
 			if(OpenFlAssets.exists(file, SOUND))
